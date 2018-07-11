@@ -1,8 +1,7 @@
 """"
-Ward van Rooij
+milan
 Data Cleaning
 """
-
 
 #Import necessities.
 import pandas as pd
@@ -29,10 +28,6 @@ lst =  ['timestamp', 'label:LYING_DOWN', 'label:SITTING', 'label:FIX_walking',
 def read_file(file_name):
     base_dir = './datasets/'
     return pd.read_csv(base_dir + file_name + '.csv', usecols=lst)
-    
-def test():
-    return 'hoi'
-
 
 #Removing outliers based on threshold and replace them by nan.
 def nan_outliers_value(data, value):
@@ -49,7 +44,6 @@ def nan_outliers_value(data, value):
         data = data.mask(outliers, np.nan)
             
     return data
-
 
 #Removing outliers based on threshold of n standard deviations and replace
 #them by nan.  
