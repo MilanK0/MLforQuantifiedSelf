@@ -226,5 +226,3 @@ def kalman_filter(data, col):
 
     data[col + '_kalman'] = new_data
     return data
-    
-    
